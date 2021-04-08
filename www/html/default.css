@@ -1,26 +1,35 @@
 .wf-roundedmplus1c { font-family: "M PLUS Rounded 1c"; }
 
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
 header {
-    position: fixed;
     width: 100%;
     height: 70px;
-    line-height: 35px;
+    line-height: 70px;
     top: 0;
     z-index: 1;
     border-bottom: 1px solid black;
-    background-color: white;
+    background-color: rgb(255, 249, 233);
 }
 
 header h1 {
     text-align: center;
+    margin: 0;
 }
 
 .outer {
     background-color: rgba(243, 243, 243, 0.658);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 70px;
+    padding-bottom: 7em;
+    padding-top: 2em;
     width: 100%;
+    height: 100%;
 }
 
 .contents {
@@ -46,7 +55,7 @@ header h1 {
     margin: 0;
 }
 
-.post form li, li {
+.post ul li{
     margin-top: 1em;
 }
 
@@ -56,7 +65,7 @@ header h1 {
     text-align: right;
 }
 
-.post input, textarea {
+.post input, .post textarea {
     width: 50%;
     box-sizing: border-box;
     border: 1px solid #999;
@@ -80,10 +89,77 @@ header h1 {
     margin-left: .5em;
 }
 
+.contents .display {
+    list-style: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: auto;
+    background-color: rgba(255, 143, 143, 0.144);
+    border: 1px solid black;
+    border-radius: 1%;
+}
+
+.display li{
+    margin: 1em, 1em;
+}
+
+.display label {
+    text-decoration: underline;
+    display: inline-block;
+    width: auto;
+    text-align: left;
+}
+
+.display p {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 7em;
+    border: 1px solid black;
+    margin: 0;
+}
+
+.display .icon {
+    width: 10%;
+    height: 10%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+.display .profile {
+    padding-top: 1em;
+    height: auto;
+}
+
+.display .name_title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.display .name_title li{
+    margin: 0;
+}
+
+.display .name {
+    padding-bottom: .5em;
+}
+
+.display .cont{
+    display: inline-block;
+}
+
+.display .created_at{
+    display: inline-block;
+    float: right;
+}
 
 footer {
     text-align: center;
-    position: fixed;
     width: 100%;
     height: 30px;
     line-height: 30px;
@@ -92,4 +168,6 @@ footer {
     z-index: 1;
     background-color: rgba(69, 192, 214, 0.5);
     border-top: 1px solid black;
+    position: fixed;
+    bottom: 0;
 }
