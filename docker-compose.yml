@@ -16,6 +16,10 @@ services:
             - ./www/html:/var/www/html
         depends_on:
             - db
+        environment:
+            POSTGRES_USER: admin
+            POSTGRES_PASSWORD: admin
+            DSN: 'pgsql:dbname=bbs_db;host=neoinstagram_db_1;port=5432'
     
     db:
         image:  postgres:13-alpine
@@ -26,7 +30,6 @@ services:
         environment:
             POSTGRES_USER: admin
             POSTGRES_PASSWORD: admin
-            TZ: Asia/Tokyo
     
     pgadmin:
         image: dpage/pgadmin4:4.2
@@ -36,7 +39,6 @@ services:
         environment:
             PGADMIN_DEFAULT_EMAIL: root
             PGADMIN_DEFAULT_PASSWORD: root
-            TZ: Asia/Tokyo
         hostname: pgadmin
         depends_on:
           - db
