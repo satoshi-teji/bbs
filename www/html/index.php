@@ -38,18 +38,23 @@
                                         <label>投稿内容</label>
                                     </div>
                                     <div class='created_at'>
-                                        <label>投稿日時:<?php print htmlspecialchars($row['created_at'])?></label>
+                                        <label>投稿日時:<?php print htmlspecialchars(substr($row['created_at'], 0, 19))?></label>
                                     </div>
-                                    
                                     <p class='post_data'><?php print htmlspecialchars($row['comment'])?></p>
                                 </li>
-                                <?php
-                                    if (!$row['created_at'] === $row['updated_at']) { ?>
-                                <li><label>最終更新日時:<?php print htmlspecialchars($row['updated_at'])?></label></li>
+                                <li>
+                                    <div class='edit_button'>
+                                        <a href='edit_form.php?id=<?php print $row['id']; ?>'><label>編集する</label></a>
+                                    </div>
+                                    <?php
+                                        if ($row['created_at'] !== $row['updated_at']) { ?>
+                                    <div class='updated_at'>
+                                        <label>最終更新日時:<?php print htmlspecialchars(substr($row['updated_at'], 0, 19))?></label>
+                                    </div>
+                                </li>
                                 <?php 
                                     } 
                                 ?>
-                                <li><a href='edit.php'>編集する</a></li>
                             </div>
                         <?php
                         }
@@ -60,7 +65,7 @@
             </div>
         </div>
         <footer>
-            <a href='post_comment.php'>投稿する</a>
+            <a href='post_form.php'>投稿する</a>
         </footer>
     </body>
 </html>
