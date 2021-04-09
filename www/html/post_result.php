@@ -61,7 +61,7 @@
                             $dbh = null;
                             
                             if ($result) {
-                                print "<p>投稿に成功しました。</p>";
+                                print "<p>投稿しました。</p>";
                             } else {
                                 print "<p>投稿に失敗しました。</p>";
                             }

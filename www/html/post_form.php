@@ -12,7 +12,7 @@
         </header>
         <div class='outer'>
             <div class='contents'>
-                <form method="POST" action="post.php" class='post'>
+                <form method="POST" action="post_result.php" class='post'>
                         <ul>
                             <li>
                                 <label for='name'>名前:</label>
@@ -28,7 +28,7 @@
                             </li>
                             <li>
                                 <label for='comment'>投稿内容:</label>
-                                <textarea id='comment' name="comment" minlength="5" maxlength='140' width=100%></textarea>
+                                <textarea id='comment' name="comment" minlength="1" maxlength='140' width=100%></textarea>
                             </li>
                             <li class='button'>
                                 <button type='submit'>投稿する</button>
