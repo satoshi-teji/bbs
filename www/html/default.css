@@ -29,7 +29,7 @@ header h1 {
     padding-bottom: 7em;
     padding-top: 2em;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .contents {
@@ -149,11 +149,20 @@ header h1 {
     padding-bottom: .5em;
 }
 
-.display .cont{
+.display .cont {
     display: inline-block;
 }
 
-.display .created_at{
+.display .created_at {
+    display: inline-block;
+    float: right;
+}
+
+.display .edit_button {
+    display: inline-block;
+}
+
+.display .updated_at {
     display: inline-block;
     float: right;
 }
